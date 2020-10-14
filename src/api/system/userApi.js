@@ -20,8 +20,8 @@ export default {
     saveUser(user) {
       return request({
         url: `/system/user/add`,
-        method: 'put',
-        data:user
+        method: 'post',
+        params:user
       })
     }
   }
