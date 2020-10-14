@@ -4,18 +4,15 @@
       <el-form-item label="用户" >
         <el-input v-model="user.username" />
       </el-form-item>
+      <el-form-item label="用户密码" >
+        <el-input type="text" v-model="user.password"  />
+      </el-form-item>
+      <el-form-item label="确认密码" >
+        <el-input type="password" v-model="user.checkPass" />
+      </el-form-item>
        <el-form-item label="性别" >
           <el-radio v-model="user.sex" label="男">男</el-radio>
           <el-radio v-model="user.sex" label="女">女</el-radio>
-      </el-form-item>
-      <el-form-item label="真实姓名" >
-        <el-input v-model="user.realName" />
-      </el-form-item>
-      <el-form-item label="电话号码" >
-        <el-input v-model="user.phoneNumber" />
-      </el-form-item>
-       <el-form-item label="电子邮箱" >
-        <el-input v-model="user.email" />
       </el-form-item>
        <!-- <el-form-item label="用户生日" >
         <el-date-picker
@@ -24,7 +21,7 @@
           placeholder="选择日期">
       </el-date-picker>
       </el-form-item> -->
-
+      
       <el-form-item>
         <el-button :disabled="saveBtnDisabled" type="primary" @click="saveOrUpdate">保存</el-button>
       </el-form-item>
@@ -38,7 +35,7 @@ export default {
         return {
             user:{
                 username: '',  
-                realName:'',
+                password:'',
                 sex:'',
                 birthday:''   
             },
